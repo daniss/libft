@@ -11,20 +11,17 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-static int	sep(char a, char *charset)
+static int	sep(const char a, char charset)
 {
 	int	i;
 
 	i = -1;
-	while (charset[++i])
-	{
-		if (charset[i] == a)
-			return (1);
-	}
+	if (charset == a)
+		return (1);
 	return (0);
 }
 
-static int	ft_dup(char *src, char *charset)
+static int	ft_dup(const char *src, char charset)
 {
 	int	i;
 	int	compt;
@@ -45,7 +42,7 @@ static int	ft_dup(char *src, char *charset)
 	return (compt);
 }
 
-static char	*ft_find(int *ind, char *src, char *charset)
+static char	*ft_find(int *ind, const char *src, char charset)
 {
 	int		tail;
 	char	*tab;
