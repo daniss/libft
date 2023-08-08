@@ -9,9 +9,9 @@
 /*   Updated: 2023/07/23 11:35:49 by dcindrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include <libft.h>
 
-int	sep(char a, char *charset)
+static int	sep(char a, char *charset)
 {
 	int	i;
 
@@ -24,7 +24,7 @@ int	sep(char a, char *charset)
 	return (0);
 }
 
-int	ft_dup(char *src, char *charset)
+static int	ft_dup(char *src, char *charset)
 {
 	int	i;
 	int	compt;
@@ -45,7 +45,7 @@ int	ft_dup(char *src, char *charset)
 	return (compt);
 }
 
-char	*ft_find(int *ind, char *src, char *charset)
+static char	*ft_find(int *ind, char *src, char *charset)
 {
 	int		tail;
 	char	*tab;
@@ -69,37 +69,23 @@ char	*ft_find(int *ind, char *src, char *charset)
 	return (tab);
 }
 
-char	**ft_split(char *str, char *charset)
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	int		i;
 	int		n;
-	int		taill;
+	int		heigh;
 
 	i = 0;
 	n = 0;
-	taill = ft_dup(str, charset) + 1;
-	tab = malloc(sizeof(char *) * taill);
+	heigh = ft_dup(s, c) + 1;
+	tab = malloc(sizeof(char *) * heigh);
 	if (!tab)
 		return (NULL);
-	while (i < taill - 1)
+	while (i < heigh - 1)
 	{
-		tab[i++] = ft_find(&n, str, charset);
+		tab[i++] = ft_find(&n, s, c);
 	}
 	tab[i] = 0;
 	return (tab);
 }
-
-/*#include <stdio.h>
-int main(int argc, char **argv)
-{
-    (void)argc;
-    char **res = ft_split(argv[1], argv[2]);
-    int i = 0;
-    while (res[i])
-    {
-        printf("t[%d] = %s\n", i, res[i]);
-        i++;
-    }
-    printf("%s",res[i]);
-}*/

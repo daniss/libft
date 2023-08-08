@@ -1,81 +1,29 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dcindrak <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 14:45:41 by dcindrak          #+#    #+#             */
-/*   Updated: 2023/07/19 13:38:30 by dcindrak         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_len(char *st)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	int i;
+	int	a;
+	char	*tab;
 
 	i = 0;
-	while (st[i])
-		i++;
-	return (i);
-}
-
-int	ft_heightotal(char **strs, int size)
-{
-	int	i;
-	int	totaltail;
-
-	totaltail = 0;
-	i = 0;
-	while (i < size)
-	{
-		totaltail += ft_len(strs[i]);
-		i++;
-	}
-	return (totaltail);
-}
-
-int	ft_tail(char *sep, int size, char **strs)
-{
-	int	taill;
-
-	taill = ft_len(sep) * (size - 1) + ft_heightotal(strs, size);
-	return (taill);
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	char	*ec;
-	int		j;
-	int		x;
-	int		i;
-
-	j = 0;
-	x = 0;
-	ec = (char *)malloc(ft_tail(sep, size, strs) * sizeof(char));
-	i = 0;
-	if (size == 0)
-		return (ec);
-	if (!ec)
+	a = 0;
+	tab = (char*)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!tab)
 		return (NULL);
-	while (i < size)
+	while(s1[i])
 	{
-		while (strs[i][j])
-			ec[x++] = strs[i][j++];
-		j = 0;
-		while (j < ft_len(sep) && x < ft_tail(sep, size, strs))
-			ec[x++] = sep[j++];
-		j = 0;
+		tab[a] = s1[i];
+		a++;
 		i++;
 	}
-	return (ec);
+	i = 0;
+	while(s2[i])
+	{
+		tab[a] = s2[i];
+		a++;
+		i++;
+	}
+	tab[a] = 0;
+	return (tab);
 }
-/*#include <stdio.h>
-
-int main()
-{
-    char *tab[] = {"salut","comment","ca","va","?"};
-    char *r = ft_strjoin(5, tab, " ");
-    printf("%s",r);
-}*/
