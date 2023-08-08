@@ -1,6 +1,6 @@
 #include "libft.h"
 
-static int	ft_len(int nbr)
+static int	ft_len(long nbr)
 {
 	int	i;
 
@@ -10,6 +10,8 @@ static int	ft_len(int nbr)
 		nbr = -nbr;
 		i++;
 	}
+	if(nbr == 0)
+		i++;
 	while(nbr > 0)
 	{
 		nbr /= 10;
