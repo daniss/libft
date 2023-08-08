@@ -9,7 +9,7 @@
 /*   Updated: 2023/07/23 11:35:49 by dcindrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <libft.h>
+#include "libft.h"
 
 static int	sep(char a, char *charset)
 {
