@@ -13,9 +13,6 @@
 
 static int	sep(const char a, char charset)
 {
-	int	i;
-
-	i = -1;
 	if (charset == a)
 		return (1);
 	return (0);
