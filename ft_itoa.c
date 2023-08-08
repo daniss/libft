@@ -29,14 +29,14 @@ char	*ft_itoa(int n)
 	i = -1;
 	tai = ft_len(nb) + 1;
 	ren = malloc(sizeof(char) * tai);
-    if (!ren)
-        return (NULL);
+	if (!ren)
+		return (NULL);
 	if (nb < 0)
-    {
-        ren[0] = '-';
-        nb = -nb;
+	{
+		ren[0] = '-';
+		nb = -nb;
 		i = 0;
-    }
+	}
 	ren[--tai] = 0;
 	tai--;
 	while (tai > i)

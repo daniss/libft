@@ -3,17 +3,17 @@
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char *tab;
-	int i;
-	int b;
+	unsigned int i;
+	unsigned int b;
 
 	b = 0;
 	i = 0;
 	tab = (char*)malloc(sizeof(char) * len);
 	if (!tab)
 		return (NULL);
-	while(s[i])
+	while (s[i])
 	{
-		if(i >= start && b < len)
+		if (i >= start && b < len)
 		{
 			tab[b] = s[i];
 			b++;

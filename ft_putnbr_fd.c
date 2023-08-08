@@ -2,7 +2,6 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int i = 0;
 	long nb = n;
 
 	if (nb < 0)
