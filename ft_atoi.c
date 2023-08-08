@@ -1,10 +1,10 @@
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	size_t  i;
-	int sign;
-	int nbr;
+	size_t	i;
+	int		sign;
+	int		nbr;
 
 	nbr = 0;
 	sign = 1;
@@ -23,5 +23,5 @@ int		ft_atoi(const char *str)
 		nbr = nbr * 10 + str[i] - 48;
 		i++;
 	}
-	return(nbr * sign);
+	return (nbr * sign);
 }

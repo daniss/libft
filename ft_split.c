@@ -77,9 +77,7 @@ char	**ft_split(char const *s, char c)
 	if (!tab)
 		return (NULL);
 	while (i < heigh - 1)
-	{
 		tab[i++] = ft_find(&n, s, c);
-	}
 	tab[i] = 0;
 	return (tab);
 }

@@ -1,14 +1,14 @@
 #include "libft.h"
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *tab;
-	unsigned int i;
-	unsigned int b;
+	char			*tab;
+	unsigned int	i;
+	unsigned int	b;
 
 	b = 0;
 	i = 0;
-	tab = (char*)malloc(sizeof(char) * (len + 1));
+	tab = (char *)malloc(sizeof(char) * (len + 1));
 	if (!tab)
 		return (NULL);
 	while (s[i])

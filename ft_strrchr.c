@@ -2,8 +2,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int  i;
-	int  pos;
+	int	i;
+	int	pos;
 
 	pos = -1;
 	i = 0;
@@ -14,8 +14,8 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == c)
-		return ((char*)(s + i));
+		return ((char *)(s + i));
 	if (pos > -1)
-		return ((char*)(s + pos));
+		return ((char *)(s + pos));
 	return (NULL);
 }
