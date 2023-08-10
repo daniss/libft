@@ -5,14 +5,14 @@ static int	ft_len(long nbr)
 	int	i;
 
 	i = 0;
-	if(nbr < 0)
+	if (nbr < 0)
 	{
 		nbr = -nbr;
 		i++;
 	}
-	if(nbr == 0)
+	if (nbr == 0)
 		i++;
-	while(nbr > 0)
+	while (nbr > 0)
 	{
 		nbr /= 10;
 		i++;
@@ -47,5 +47,5 @@ char	*ft_itoa(int n)
 		nb /= 10;
 		tai--;
 	}
-	return(ren);
+	return (ren);
 }
