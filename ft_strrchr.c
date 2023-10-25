@@ -9,7 +9,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if ((unsigned char)s[i] == (unsigned char)c)
 			pos = i;
 		i++;
 	}

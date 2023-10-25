@@ -28,6 +28,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (is_inchar(s1[end], set) == 1)
 		end--;
+	if (start > end)
+		return (ft_strdup(""));
 	tab = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (!tab)
 		return (NULL);

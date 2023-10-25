@@ -2,11 +2,19 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*tab;
+	char    *mem;
+	size_t     i;
+	size_t      total;
 
-	tab = (void *)malloc(count * size);
-	if (!tab)
+	i = 0;
+	total = count * size;
+	mem = malloc(total);
+	if (!mem)
 		return (NULL);
-	ft_bzero(tab, count);
-	return (tab);
+	while (i < (count * size))
+	{
+		mem[i] = 0;
+		i++;
+	}
+	return (mem);
 }
