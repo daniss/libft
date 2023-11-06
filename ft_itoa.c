@@ -6,7 +6,7 @@
 /*   By: dcindrak <dcindrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:31:31 by dcindrak          #+#    #+#             */
-/*   Updated: 2023/11/06 15:48:32 by dcindrak         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:52:11 by dcindrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,8 @@ char	*ft_itoa(int n)
 	tai--;
 	while (tai > i)
 	{
-		ren[tai] = nb % 10 + 48;
+		ren[tai--] = nb % 10 + 48;
 		nb /= 10;
-		tai--;
 	}
 	return (ren);
 }
