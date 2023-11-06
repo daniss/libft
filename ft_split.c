@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcindrak <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dcindrak <dcindrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 12:58:35 by dcindrak          #+#    #+#             */
-/*   Updated: 2023/07/23 11:35:49 by dcindrak         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:45:54 by dcindrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int	sep(const char a, char charset)

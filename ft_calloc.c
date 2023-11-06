@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dcindrak <dcindrak@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/06 15:29:26 by dcindrak          #+#    #+#             */
+/*   Updated: 2023/11/06 15:29:26 by dcindrak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char    *mem;
-	size_t     i;
-	size_t      total;
+	char	*mem;
+	size_t	i;
+	size_t	total;
 
 	i = 0;
 	total = count * size;

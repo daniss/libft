@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcindrak <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dcindrak <dcindrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 10:48:06 by dcindrak          #+#    #+#             */
-/*   Updated: 2023/07/11 04:43:13 by dcindrak         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:46:38 by dcindrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
