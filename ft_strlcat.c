@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcindrak <dcindrak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dcindrak <dcindrak@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 13:31:03 by dcindrak          #+#    #+#             */
-/*   Updated: 2023/11/06 15:46:20 by dcindrak         ###   ########.fr       */
+/*   Updated: 2023/11/07 22:57:05 by dcindrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,18 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	j;
-	size_t	tailled;
-	size_t	tailles;
+	size_t	src_len;
+	size_t	cur;
 
-	i = 0;
-	j = 0;
-	while (dest[j] != '\0')
-		j++;
-	tailled = j;
-	tailles = ft_strlen(src);
-	if (dstsize == 0 || dstsize <= tailled)
-		return (tailles + dstsize);
-	while (src [i] != '\0' && i < dstsize - tailled - 1)
+	src_len = ft_strlen(dest);
+	cur = 0;
+	if (dstsize <= src_len)
+		return (ft_strlen(src) + dstsize);
+	while (src[cur] && (src_len + cur) < (dstsize - 1))
 	{
-		dest[j] = src[i];
-		i++;
-		j++;
+		dest[src_len + cur] = src[cur];
+		cur++;
 	}
-	dest[j] = '\0';
-	return (tailled + tailles);
+	dest[src_len + cur] = 0;
+	return (ft_strlen(src) + src_len);
 }
