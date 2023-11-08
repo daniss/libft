@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	a = 0;
-    if (!s1)
+	if (!s1)
 		return (NULL);
 	tab = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!tab)
@@ -33,11 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	i = 0;
 	while (s2[i])
-	{
-		tab[a] = s2[i];
-		a++;
-		i++;
-	}
+		tab[a++] = s2[i++];
 	tab[a] = 0;
 	return (tab);
 }

@@ -11,15 +11,10 @@
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-# define LIBFT_H     
+# define LIBFT_H
 
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h> 
-# include <stdint.h>
 
 void	*ft_memset(void *pointer, int value, size_t count);
 void	ft_bzero(void *s, size_t n);

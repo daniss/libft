@@ -48,11 +48,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!tab)
 		return (NULL);
 	while (s1[start] && start < end + 1)
-	{
-		tab[i] = s1[start];
-		i++;
-		start++;
-	}
+		tab[i++] = s1[start++];
 	tab[i] = 0;
 	return (tab);
 }
