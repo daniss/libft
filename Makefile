@@ -11,7 +11,7 @@ NAME	= libft.a
 
 OBJS	=  ${SRCS:.c=.o}
 
-HEADERS	= includes/
+HEADERS	= /libft.h
 
 .c.o	:
 		gcc -Wall -Wextra -Werror -I ${HEADERS} -c $< -o ${<:.c=.o}
