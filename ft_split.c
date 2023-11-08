@@ -6,7 +6,7 @@
 /*   By: dcindrak <dcindrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 12:58:35 by dcindrak          #+#    #+#             */
-/*   Updated: 2023/11/06 15:45:54 by dcindrak         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:52:13 by dcindrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,16 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	n = 0;
-	heigh = ft_dup(s, c) + 1;
-	tab = malloc(sizeof(char *) * heigh);
-	if (!tab)
-		return (NULL);
-	while (i < heigh - 1)
-		tab[i++] = ft_find(&n, s, c);
-	tab[i] = 0;
-	return (tab);
+	if (s)
+	{
+		heigh = ft_dup(s, c) + 1;
+		tab = malloc(sizeof(char *) * heigh);
+		if (!tab)
+			return (NULL);
+		while (i < heigh - 1)
+			tab[i++] = ft_find(&n, s, c);
+		tab[i] = 0;
+		return (tab);
+	}
+	return (NULL);
 }

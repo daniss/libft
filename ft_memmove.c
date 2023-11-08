@@ -16,6 +16,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	long	i;
 
+	if (dst == NULL && src == NULL && len > 0)
+	{
+		return (NULL);
+	}
 	if (dst < src)
 	{
 		i = 0;
@@ -24,7 +28,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
 			i++;
 		}
-		return (dst);
 	}
 	else
 	{
@@ -34,6 +37,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
 			i--;
 		}
-		return (dst);
 	}
+	return (dst);
 }

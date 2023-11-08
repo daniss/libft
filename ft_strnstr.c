@@ -6,7 +6,7 @@
 /*   By: dcindrak <dcindrak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 10:48:06 by dcindrak          #+#    #+#             */
-/*   Updated: 2023/11/06 15:46:38 by dcindrak         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:40:21 by dcindrak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 
 	i = 0;
+    if (big == NULL && len == 0)
+	{
+		return (0);
+	}
 	if (*little == 0)
 		return ((char *)big);
 	while (big[i] && i < len)

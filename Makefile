@@ -11,12 +11,12 @@ NAME	= libft.a
 
 OBJS	=  ${SRCS:.c=.o}
 
-HEADERS	= /libft.h
+HEADERS	= .	
 
 .c.o	:
 		gcc -Wall -Wextra -Werror -I ${HEADERS} -c $< -o ${<:.c=.o}
 
-${NAME} : ${OBJS}
+${NAME} : ${OBJS} libft.h
 		ar rc ${NAME} ${OBJS}
 
 all : ${NAME}
@@ -29,3 +29,9 @@ fclean : clean
 		rm -f ${NAME}
 
 re : fclean all
+
+so:
+	gcc -nostartfiles -fPIC -Wall -Wextra -Werror $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
+
+.PHONY = all clean fclean re
