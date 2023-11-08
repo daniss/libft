@@ -30,8 +30,4 @@ fclean : clean
 
 re : fclean all
 
-so:
-	gcc -nostartfiles -fPIC -Wall -Wextra -Werror $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
-
 .PHONY = all clean fclean re
